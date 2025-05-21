@@ -5,7 +5,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
+- ✨ [Features](#features)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
@@ -108,7 +108,7 @@ social_media/
 
 Run the command `docker-compose up --build` at the project root folder to get it up & running on your local
 
-## Features
+## ✨ Features
 
 - 🎬 Modular architecture for Movies, TV, and Music domains
 - 🧩 Scalable microservice-like design using FastAPI
