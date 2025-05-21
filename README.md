@@ -5,12 +5,12 @@
 - [📖 Description](#-📖-description)
 - [📦Installation](#📦-installation)
 - [🚀Usage](#🚀-usage)
-- [✨Features](#✨-features)
+- [✨Features](#-✨-features)
 - [🤝Contributing](#🤝-contributing)
 - [🙏Acknowledgements](#🙏-acknowledgements)
 - [📞Contact](#📞-contact)
 
-## 📖 Description
+##  📖 Description
 
 This project serves as a scaffolding tool for building Python applications that are production-ready. It emphasizes **modularity**, **scalability**, and a clear **separation of concerns**, providing a solid foundation for developing maintainable and well-structured codebases.
 
