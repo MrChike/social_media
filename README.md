@@ -33,76 +33,88 @@ docker-compose up --build
 social_media/
 ├── __init__.py
 │
-├── movies/                      # Module for handling movies
+├── movies/                            # Module for handling movies
 │   ├── __init__.py
-│   ├── router.py                # Defines API endpoints and maps them to the controller for movies
-│   ├── controller.py            # Handles request-response cycle for movies; invokes movie services
-│   ├── service.py               # Business logic for movies: processing, filtering, etc.
-│   ├── model.py                 # ORM model for movies (e.g., SQLAlchemy Movie table)
-│   ├── schema.py                # Pydantic models for request validation and response serialization (movies)
-│   ├── dependencies.py          # Dependency-injected functions or classes shared within movies module
-│   └── test.py                  # Unit tests for movies
+│   ├── router.py                      # Defines API endpoints and maps them to the controller for movies
+│   ├── controller.py                  # Handles request-response cycle for movies; invokes movie services
+│   ├── service.py                     # Business logic for movies: processing, filtering, etc.
+│   ├── model.py                       # ORM model for movies (e.g., SQLAlchemy Movie table)
+│   ├── schema.py                      # Pydantic models for request validation and response serialization (movies)
+│   ├── dependencies.py                # Dependency-injected functions or classes shared within movies module
+│   └── test.py                        # Unit tests for movies
 │
-├── tv_series/                   # Module for handling TV series
+├── tv_series/                         # Module for handling TV series
 │   ├── __init__.py
-│   ├── router.py                # Defines API endpoints and maps them to the controller for TV series
-│   ├── controller.py            # Handles request-response cycle for TV series; invokes services
-│   ├── service.py               # Business logic for TV series: logic for seasons, episodes, etc.
-│   ├── model.py                 # ORM model for TV series (e.g., SQLAlchemy Series table)
-│   ├── schema.py                # Pydantic models for request validation and response serialization (TV series)
-│   ├── dependencies.py          # Dependency-injected functions or classes shared within tv_series module
-│   └── test.py                  # Unit tests for TV series
+│   ├── router.py                      # Defines API endpoints and maps them to the controller for TV series
+│   ├── controller.py                  # Handles request-response cycle for TV series; invokes services
+│   ├── service.py                     # Business logic for TV series: logic for seasons, episodes, etc.
+│   ├── model.py                       # ORM model for TV series (e.g., SQLAlchemy Series table)
+│   ├── schema.py                      # Pydantic models for request validation and response serialization (TV series)
+│   ├── dependencies.py                # Dependency-injected functions or classes shared within tv_series module
+│   └── test.py                        # Unit tests for TV series
 │
-├── music/                       # Module for handling music
+├── music/                             # Module for handling music
 │   ├── __init__.py
-│   ├── router.py                # Defines API endpoints and maps them to the controller for music
-│   ├── controller.py            # Handles request-response cycle for music; invokes services
-│   ├── service.py               # Business logic for music: logic for songs, albums, artists
-│   ├── model.py                 # ORM model for music (e.g., SQLAlchemy Song or Album table)
-│   ├── schema.py                # Pydantic models for request validation and response serialization (music)
-│   ├── dependencies.py          # Dependency-injected functions or classes shared within music module
-│   └── test.py                  # Unit tests for music
+│   ├── router.py                      # Defines API endpoints and maps them to the controller for music
+│   ├── controller.py                  # Handles request-response cycle for music; invokes services
+│   ├── service.py                     # Business logic for music: logic for songs, albums, artists
+│   ├── model.py                       # ORM model for music (e.g., SQLAlchemy Song or Album table)
+│   ├── schema.py                      # Pydantic models for request validation and response serialization (music)
+│   ├── dependencies.py                # Dependency-injected functions or classes shared within music module
+│   └── test.py                        # Unit tests for music
 │
-├── static/                      # Static files (e.g., CSS, JS, images)
-│   ├── movie_posters/           # Folder containing movie poster images
-│   ├── tv_series_posters/       # Folder containing TV series poster images
-│   └── album_covers/            # Folder containing album cover images
+├── static/                            # Static files (e.g., CSS, JS, images)
+│   ├── movie_posters/                 # Folder containing movie poster images
+│   ├── tvseries_posters/             # Folder containing TV series poster images
+│   └── album_covers/                  # Folder containing album cover images
 │
-├── templates/                   # HTML or templating engine files (e.g., Jinja2)
-│   ├── movie_detail.html        # Template for rendering movie details
-│   ├── tv_series_detail.html    # Template for rendering TV series details
-│   └── music_detail.html        # Template for rendering music details
+├── templates/                         # HTML or templating engine files (e.g., Jinja2)
+│   ├── movie_detail.html              # Template for rendering movie details
+│   ├── tvseries_detail.html           # Template for rendering TV series details
+│   └── music_detail.html              # Template for rendering music details
 │
 ├── docs/
-│   └── journal.md               # Documentation or project notes
+│   └── journal.md                     # Documentation or project notes
 │
-├── shared/
-│   ├── config/                  # Project-wide configurations, e.g., settings.py
-│   ├── db/                      # Database connection logic, session handling
-│   ├── dependencies/            # Shared dependencies across modules
-│   ├── middleware/              # Project-wide middleware (e.g., CORS, authentication)
-│   └── utils/                   # Utility functions or helpers used across the app
+├── shared/                            # Project-wide shared code and services
+│   ├── __init__.py
+│   ├── config/                        # Project-wide configurations
+│   │   ├── __init__.py
+│   │   └── settings.py                # Application settings (e.g., environment variables via Pydantic)
+│   ├── db/                            # Database connection logic, session handling
+│   │   ├── __init__.py
+│   │   └── connection.py              # Database engine and session setup (e.g., SQLAlchemy)
+│   ├── dependencies/                  # Shared dependency-injected functions (e.g., get_current_user)
+│   ├── middleware/                    # Project-wide middleware (e.g., CORS, logging, error handlers)
+│   ├── services/                      # Shared service layers (e.g., external APIs)
+│   │   ├── __init__.py
+│   │   └── external_apis/             # Integration with third-party APIs
+│   │       ├── __init__.py
+│   │       ├── omdb_movies.py         # OMDb API integration for fetching movie data
+│   │       ├── spotify_music.py       # Spotify API integration for fetching music/artist data
+│   │       └── tvmaze_tvseries.py     # TVmaze API integration for fetching TV series metadata
+│   └── utils/                         # Utility functions or helpers used across the app
 │
 ├── scripts/
-│   ├── __init__.py              # Initialization for utility scripts
-│   └── connect_with_me.py       # Personal script (e.g., LinkedIn automation or social connection)
+│   ├── __init__.py                    # Initialization for utility scripts
+│   └── connect_with_me.py             # Personal script (e.g., LinkedIn automation or social connection)
 │
-├── tests/                       # Integration, system, and E2E tests
+├── tests/                             # Integration, system, and E2E tests
 │   ├── __init__.py
-│   ├── movies/                  # Integration tests for movies module
-│   ├── tv_series/               # Integration tests for tv_series module
-│   └── music/                   # Integration tests for music module
+│   ├── movies/                        # Integration tests for movies module
+│   ├── tv_series/                     # Integration tests for tv_series module
+│   └── music/                         # Integration tests for music module
 │
-├── .coverage                    # Coverage report generated by testing
-├── .gitignore                   # Specifies files and folders to be ignored by Git
-├── main.py                      # Entrypoint of the FastAPI application
-├── nginx.conf                   # Nginx configuration – reverse proxy, rate limiting, static file serving
-├── pytest.ini                   # Pytest configuration
-├── requirements.txt             # Python dependencies
-├── docker-compose.yaml          # Docker Compose configuration
-├── Dockerfile                   # Docker build file for the FastAPI application
-├── Dockerfile.nginx             # Docker build file for the Nginx reverse proxy
-└── README.md                    # Project overview and usage documentation
+├── .coverage                          # Coverage report generated by testing
+├── .gitignore                         # Specifies files and folders to be ignored by Git
+├── main.py                            # Entrypoint of the FastAPI application
+├── nginx.conf                         # Nginx configuration – reverse proxy, rate limiting, static file serving
+├── pytest.ini                         # Pytest configuration
+├── requirements.txt                   # Python dependencies
+├── docker-compose.yaml                # Docker Compose configuration
+├── Dockerfile                         # Docker build file for the FastAPI application
+├── Dockerfile.nginx                   # Docker build file for the Nginx reverse proxy
+└── README.md                          # Project overview and usage documentation
 ```
 
 ## Usage
