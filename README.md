@@ -2,13 +2,13 @@
 
 ## 📚 Table of Contents
 
-- [📖 Description](#📖-description)
-- [📦 Installation](#📦-installation)
-- [🚀 Usage](#🚀-usage)
-- [✨ Features](#✨-features)
-- [🤝 Contributing](#🤝-contributing)
-- [🙏 Acknowledgements](#🙏-acknowledgements)
-- [📞 Contact](#📞-contact)
+- 📖[Description](#📖-description)
+- 📦[Installation](#📦-installation)
+- 🚀[Usage](#🚀-usage)
+- ✨[Features](#✨-features)
+- 🤝[Contributing](#🤝-contributing)
+- 🙏[Acknowledgements](#🙏-acknowledgements)
+- 📞[Contact](#📞-contact)
 
 ## 📖 Description
 
