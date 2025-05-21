@@ -2,21 +2,21 @@
 
 ## 📚 Table of Contents
 
-- [📖 Description](#-📖-description)
-- [📦Installation](#📦-installation)
-- [🚀Usage](#🚀-usage)
-- [✨Features](#-✨-features)
-- [🤝Contributing](#🤝-contributing)
-- [🙏Acknowledgements](#🙏-acknowledgements)
-- [📞Contact](#📞-contact)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
-##  📖 Description
+## Description
 
 This project serves as a scaffolding tool for building Python applications that are production-ready. It emphasizes **modularity**, **scalability**, and a clear **separation of concerns**, providing a solid foundation for developing maintainable and well-structured codebases.
 
 Whether you're starting a new project or looking to standardize your development practices, this scaffold helps you adopt best practices from the ground up.
 
-## 📦 Installation
+## Installation
 
 Clone the repo and run docker compose:
 
@@ -104,11 +104,11 @@ social_media/
 └── README.md                    # Project overview and usage documentation
 ```
 
-## 🚀 Usage
+## Usage
 
 Run the command `docker-compose up --build` at the project root folder to get it up & running on your local
 
-##  ✨ Features
+## Features
 
 - 🎬 Modular architecture for Movies, TV, and Music domains
 - 🧩 Scalable microservice-like design using FastAPI
@@ -116,16 +116,16 @@ Run the command `docker-compose up --build` at the project root folder to get it
 - 🐳 Dockerized for local and production environments
 - ⚙️ Centralized config and dependency injection for maintainability
 
-## 🤝 Contributing
+## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - Firstly, I want to acknowledge myself for staying committed to continuous learning and growth in a challenging field.
 - This section will be updated as the project evolves...
 
-## 📞 Contact
+## Contact
 
 Feel free to connect with me on
 
